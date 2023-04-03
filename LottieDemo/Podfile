@@ -1,0 +1,21 @@
+source 'https://github.com/Artsy/Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+inhibit_all_warnings!
+use_frameworks! :linkage => :static
+platform :ios,'13.0'
+
+target 'LottieDemo' do
+
+    pod 'lottie-ios'
+    pod 'SnapKit'
+    pod 'EasyObserve'
+    
+    target 'LottieDemoTests' do
+        inherit! :search_paths
+    end
+end
+
+
+
+
