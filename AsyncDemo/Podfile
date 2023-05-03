@@ -1,0 +1,15 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+inhibit_all_warnings!
+use_frameworks! :linkage => :static
+platform :ios,'15.0'
+
+target 'AsyncDemo' do
+  
+  # Test Target
+  target 'AsyncDemoTests' do
+    inherit! :search_paths
+    pod 'Quick', '~> 5.0'
+    pod 'Nimble', '~> 10.0'
+  end
+end

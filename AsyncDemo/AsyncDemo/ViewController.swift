@@ -11,9 +11,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .systemPink
+        testDomin.testCase()
     }
-
-
+    
+    private var testDomin: Testable.Type {
+        Chapter2.self
+    }
 }
 
