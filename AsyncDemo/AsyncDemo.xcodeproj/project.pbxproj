@@ -10,7 +10,6 @@
 		C53E2BB66AF8E0BBD438A83B /* Pods_AsyncDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD0F85C7C6EAC9CF0F9BCD7 /* Pods_AsyncDemo.framework */; };
 		CC40F64A53B711C9988C650F /* Pods_AsyncDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A3C484ACBB4A4AD187A07A5 /* Pods_AsyncDemoTests.framework */; };
 		DB447B5B2A029EC300F8561F /* Chapter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB447B5A2A029EC300F8561F /* Chapter2.swift */; };
-		DB447B5F2A02AB5A00F8561F /* Chapter2OC.m in Sources */ = {isa = PBXBuildFile; fileRef = DB447B5E2A02AB5A00F8561F /* Chapter2OC.m */; };
 		DB60EE3F29E84C11006FDDA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB60EE3E29E84C11006FDDA3 /* AppDelegate.swift */; };
 		DB60EE4129E84C11006FDDA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB60EE4029E84C11006FDDA3 /* SceneDelegate.swift */; };
 		DB60EE4329E84C11006FDDA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB60EE4229E84C11006FDDA3 /* ViewController.swift */; };
@@ -41,8 +40,6 @@
 		A500102C9BDAA8457726A762 /* Pods-AsyncDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsyncDemo.debug.xcconfig"; path = "Target Support Files/Pods-AsyncDemo/Pods-AsyncDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		DB447B5A2A029EC300F8561F /* Chapter2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2.swift; sourceTree = "<group>"; };
 		DB447B5C2A02AB5A00F8561F /* AsyncDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AsyncDemo-Bridging-Header.h"; sourceTree = "<group>"; };
-		DB447B5D2A02AB5A00F8561F /* Chapter2OC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chapter2OC.h; sourceTree = "<group>"; };
-		DB447B5E2A02AB5A00F8561F /* Chapter2OC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chapter2OC.m; sourceTree = "<group>"; };
 		DB60EE3B29E84C11006FDDA3 /* AsyncDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsyncDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB60EE3E29E84C11006FDDA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB60EE4029E84C11006FDDA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,8 +144,6 @@
 			children = (
 				DB60EE6F29E84C4C006FDDA3 /* Chapter1.swift */,
 				DB447B5A2A029EC300F8561F /* Chapter2.swift */,
-				DB447B5D2A02AB5A00F8561F /* Chapter2OC.h */,
-				DB447B5E2A02AB5A00F8561F /* Chapter2OC.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -309,7 +304,6 @@
 				DB447B5B2A029EC300F8561F /* Chapter2.swift in Sources */,
 				DB60EE7029E84C4C006FDDA3 /* Chapter1.swift in Sources */,
 				DB60EE3F29E84C11006FDDA3 /* AppDelegate.swift in Sources */,
-				DB447B5F2A02AB5A00F8561F /* Chapter2OC.m in Sources */,
 				DB60EE4129E84C11006FDDA3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

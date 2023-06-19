@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     }
     
     private var testDomin: Testable.Type {
+//        Chapter1.self
         Chapter2.self
     }
 }

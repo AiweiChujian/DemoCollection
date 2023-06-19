@@ -29,6 +29,25 @@ class Chapter2: Testable {
                 print(error)
             }
         }
+        
+        Task.init {
+            let file = File()
+            let size = try await file.size
+            print(size)
+            let count = try await file[9]
+            print(count)
+            
+        }
+        
+        let store = StateStore()
+        Task.init {
+            let shouldLoad = try await store.shouldLode
+            print("should load: \(shouldLoad), loaded: \(store.loaded)")
+        }
+        
+        DispatchQueue.main.async {
+            store.load()
+        }
     }
 }
 
@@ -132,5 +151,58 @@ extension Chapter2.Worker: WorkDelegate {
     func workDidFailed(error: Error) {
         continuation?.resume(throwing: error)
         continuation = nil
+    }
+}
+
+
+// MARK: Async Getter
+extension Chapter2   {
+    enum FileError: Error {
+        case corrupted
+    }
+    class File {
+        var isCorrupted = false
+        
+        var size: Int {
+            get async throws {
+                if isCorrupted {
+                    throw FileError.corrupted
+                }
+                return try await calculateSize()
+            }
+        }
+        
+        func calculateSize() async throws -> Int {
+            try await Task.sleep(nanoseconds: 1 * NSEC_PER_SEC)
+            return Int.random(in: 512 ..< 1024)
+        }
+        
+        subscript(_ index: Int) -> Int {
+            get async throws {
+                try await Task.sleep(nanoseconds: 1 * NSEC_PER_SEC)
+                return index * index
+            }
+        }
+    }
+}
+
+// MARK: 状态依赖
+extension Chapter2 {
+    class StateStore {
+        private(set) var loaded = false
+        
+        var shouldLode: Bool {
+            get async throws {
+                if !loaded {
+                    try await Task.sleep(nanoseconds: 1 * NSEC_PER_SEC)
+                    return true
+                }
+                return false
+            }
+        }
+        
+        func load() {
+            loaded = true
+        }
     }
 }
